@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <script defer>
+      const submitBtn = document.getElementById('submitBtn');
+
+      submitBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to website</h1>
+    </header>
+    <main>
+      <section>
+        <header>
+          <h2>You don't have account</h2>
+          <i>Fill out this form to register</i>
+        </header>
+        <article>
+          <form action="register.php" method="post">
+            <span>username</span>
+            <input type="text" id="username" name="username" />
+            <br />
+            <span>password</span>
+            <input type="password" name="password" id="password" />
+            <br />
+            <button id="submitBtn">Register in</button>
+          </form>
+          <a href="index.php">log in if you have account</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

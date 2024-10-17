@@ -1,0 +1,24 @@
+services:
+  dangerous-website:
+    build:
+      context: ./dangerous-website
+    ports:
+      - 5173:5173
+    volumes:
+      - type: bind
+        source: ./dangerous-website/index.html
+        target: /usr/src/app/index.html
+      - type: bind
+        source: ./dangerous-website/main.js
+        target: /usr/src/app/main.js
+  website:
+    build:
+      context: ./website
+    ports:
+      - 8000:80
+    volumes:
+      - ./website:/var/www/html
+  db:
+    build: ./db
+    ports:
+      - 3306:3306

