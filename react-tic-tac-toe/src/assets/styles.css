@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.board-row {
+  display: flex;
+  gap: 0.5em;
+}
+
+.square {
+  width: 7em;
+  height: 7em;
+  border: 2px solid #475569;
+  background-color: #e2e8f0;
+  border-radius: 1em;
+  outline: none;
+  transition: background-color 0.25s linear;
+  transition: transform 0.1s linear;
+}
+
+.square:hover {
+  background-color: #94a3b8;
+}
+
+.square-clicked {
+  transform: scale(0.9);
+}
